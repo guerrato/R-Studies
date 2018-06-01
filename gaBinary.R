@@ -16,14 +16,12 @@ dataset = data.frame(
     weight = c(1, 5, 10, 1, 7, 5, 1)
 )
 
-analysis = function(x)
-{
+analysis = function(x) {
   weightlimit = 15
   selectedpoints = 0
   selectedweight = 0
   
-  for (i in 1:nrow(dataset)) 
-  {
+  for (i in 1:nrow(dataset)) {
     if(x[i] != 0) {
       selectedpoints = selectedpoints + dataset[i, 2]
       selectedweight = selectedweight + dataset[i, 3]
